@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Robots | Securely Pay Now</title>
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            background-color: #000;
+            color: rgb(5, 5, 5);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .section {
+            background-color: rgba(97, 255, 195, 0.815);
+            padding: 40px;
+            border-radius: 10px;
+            
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        .cta-btn {
+            padding: 12px 24px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: large;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 80px 10px;
+            }
+        }
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the input */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.3s;
+}
+
+/* Style for focus state */
+.input-field:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h1>Secure Payment</h1>
+            <p>You can securely make your
+                Bitcoin Payment to the address listed below.
+            </p>
+            <button class="cta-btn" id="copyBtn" data-clipboard-text="3GBGxUQk6nPvy9EwSmitkzQeWovvkypnNd">Copy Bitcoin Address</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Great, We're waiting for your payment!</h3>
+                    <p>
+                        You can now log into your bitcoin exchange 
+                        provider (Binance, Coinbase Etc) and make
+                         your payment to the bitcoin wallet address 
+                         you just copied into your clipboard. 
+                        Please send your confirmation to
+                        <a style="color: #0080ff; text-decoration: none;" href="mailto:support@fxrobots.co.za">support@fxrobots.co.za</a>
+                        <br><br>
+                        <input class="input-field" type="text" placeholder="Paste our bitcoin address here to make sure you copied it!" name="text">
+                        <br>
+                        <span style="font-size: large;">
+                            3GBGxUQk6nPvy9EwSmitkzQeWovvkypnNd
+                        </span>
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script>
+        var clipboard = new ClipboardJS('#copyBtn');
+
+        clipboard.on('success', function(e) {
+            console.log(e);
+            alert('Bitcoin address copied to clipboard!');
+            e.clearSelection();
+        });
+
+        clipboard.on('error', function(e) {
+            console.log(e);
+            alert('Failed to copy Bitcoin address to clipboard!');
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("copyBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
